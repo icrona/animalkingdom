@@ -1,9 +1,9 @@
 package com.icrona.animalkingdom.fish;
 
-import com.icrona.animalkingdom.Animal;
 import com.icrona.animalkingdom.Swimmer;
+import com.icrona.animalkingdom.WalklessAnimal;
 
-public class Fish extends Animal implements Swimmer {
+public class Fish extends WalklessAnimal implements Swimmer {
 
     private String size;
 
