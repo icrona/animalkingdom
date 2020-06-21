@@ -6,10 +6,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ChickenTest {
 
-    @Test
-    void sound() {
+    private final ChickenFactory chickenFactory = new ChickenFactory();
 
-        Chicken chicken = new Chicken();
+    @Test
+    void chickenSound() {
+
+        Bird chicken = chickenFactory.getBird("chicken");
         assertEquals("Cluck, cluck", chicken.sound());
+    }
+
+    @Test
+    void roosterSound() {
+
+        Bird chicken = chickenFactory.getBird("rooster");
+        assertEquals("Cock-a-doodle-do", chicken.sound());
     }
 }
