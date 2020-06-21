@@ -12,6 +12,8 @@ public class Solution {
 
     private static final Predicate<Animal> flyableAnimal = animal -> !(animal instanceof FlightlessBird) && animal instanceof Flyable;
     private static final Predicate<Animal> walkingAnimal = animal -> !(animal instanceof WalklessAnimal);
+    private static final Predicate<Animal> swimmingAnimal = animal -> animal instanceof Swimmer;
+    private static final Predicate<Animal> soundingAnimal = animal -> animal instanceof SoundableAnimal;
 
     public static void main(String[] args) {
 
