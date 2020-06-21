@@ -17,7 +17,7 @@ class FishTest {
     @Test
     void walk() {
 
-        Fish fish = new Fish();
+        Fish fish = new Shark();
 
         Exception exception = assertThrows(UnsupportedOperationException.class, () -> {
             fish.walk();
@@ -31,7 +31,7 @@ class FishTest {
     void swim() {
 
         System.setOut(new PrintStream((outContent)));
-        Fish fish = new Fish();
+        Fish fish = new Clownfish();
         fish.swim();
 
         assertEquals("Fish is swimming\n", outContent.toString());
