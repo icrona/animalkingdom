@@ -10,7 +10,8 @@ import java.util.function.Predicate;
 
 public class Solution {
 
-    private static final Predicate<Animal> flyableAnimal = animal -> !(animal instanceof FlightlessBird) && animal instanceof Flyable ;
+    private static final Predicate<Animal> flyableAnimal = animal -> !(animal instanceof FlightlessBird) && animal instanceof Flyable;
+    private static final Predicate<Animal> walkingAnimal = animal -> !(animal instanceof WalklessAnimal);
 
     public static void main(String[] args) {
 
