@@ -11,6 +11,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class BirdTest {
 
@@ -31,8 +32,13 @@ class BirdTest {
     void fly() {
 
         Bird bird = new Chicken();
-        bird.fly();
-        assertEquals("I am flying\n", outContent.toString());
+
+        Exception exception = assertThrows(UnsupportedOperationException.class, () -> {
+            bird.fly();
+        });
+
+        String expectedMessage = "This kind of bird cannot fly";
+        assertEquals(expectedMessage, exception.getMessage());
     }
 
     @Test
