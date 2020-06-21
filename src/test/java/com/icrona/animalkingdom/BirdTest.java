@@ -1,4 +1,8 @@
+package com.icrona.animalkingdom;
+
 import com.icrona.animalkingdom.bird.Bird;
+import com.icrona.animalkingdom.bird.Chicken;
+import com.icrona.animalkingdom.bird.Duck;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,7 +30,7 @@ class BirdTest {
     @Test
     void fly() {
 
-        Bird bird = new Bird();
+        Bird bird = new Chicken();
         bird.fly();
         assertEquals("I am flying\n", outContent.toString());
     }
@@ -34,7 +38,7 @@ class BirdTest {
     @Test
     void sing() {
 
-        Bird bird = new Bird();
+        Bird bird = new Duck();
         bird.sing();
         assertEquals("I am singing\n", outContent.toString());
     }
